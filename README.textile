@@ -1,0 +1,15 @@
+h2. What's this?
+
+Tired of fighting with Textile to make your character sheet look nice? Want a *real* sheet? Then you'll need to get down and dirty with some HTML and CSS and create a *Dynamic Character Sheet* (a DST).
+
+h2. Getting Started
+
+The first step is to "read the tutorial":http://help.obsidianportal.com/faqs/advanced/creating-a-dynamic-character-sheet-template-dst and make sure you understand what you're getting into. After that, look through some of the DSTs that others have made and just start playing. Also, take a look at the devkit that's part of this package. It's a good place to start playing.
+
+h2. What is git? github?
+
+If you don't know what git or github is, that's fine. It can be useful for playing, but it's not absolutely necessary in order to get started. If you want to just get the files, click on the *Download Source* button in the top right.
+
+h2. Questions?
+
+If you have any questions, please "send me an email":mailto:support@obsidianportal.com
