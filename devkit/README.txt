@@ -1,0 +1,1 @@
+Open the index.html file in a browser. We highly suggest using Firefox/Firebug!

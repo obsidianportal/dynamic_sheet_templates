@@ -1,0 +1,75 @@
+<html>
+<head>
+  <title>DST Dev Kit</title>
+  <script type="text/javascript" src="javascripts/jquery-1.3.2.min.js"></script>
+  <script type="text/javascript" src="javascripts/jquery.jeditable-1.7.1.js"></script>
+  
+  <!-- This is where we do our magic. You can ignore this file, or take a peek if you think you can do it better! -->
+  <script type="text/javascript" src="javascripts/characters.js"></script>
+  
+  <!-- Load the example data. Modify this file to make sample data for your chosen system. -->
+  <script type="text/javascript" src="example_data.js"></script>
+  
+  <!-- Load the CSS for the DST, replace with your own! -->
+  <link href="dynamic_sheets/minimal4e/0.1/sheet.css" media="screen" rel="stylesheet" type="text/css" />
+  
+  <!-- Load the JS for the DST, replace with your own! -->
+  <script type="text/javascript" src="dynamic_sheets/minimal4e/0.1/sheet.js"></script>
+  
+</head>
+<body>
+  <p>
+    Below is an example dynamic character sheet. Try clicking on the values in order to edit them. This is how users will interact with a dynamic sheet.
+  </p>
+  <p>
+    If you want to make your own, make sure to <a href="http://help.obsidianportal.com/faqs/advanced/creating-a-dynamic-character-sheet-template-dst">read the tutorial</a> first. Then, just start editing the HTML in this file. Edit the sample data in <em>example_data.js</em> in order to create data that works with your chosen game system.
+  </p>
+  
+  <!-- Every dynamic sheet will be surrounded by a div that has the class of "ds_DST_SLUG". In this example, the slug for my DST is 'minimal4e' -->
+  <div class="ds_minimal4e">
+    <!-- This is your HTML template here -->
+    <div class="basic_info">
+      <h3>Basic Info</h3>
+      <div class="name">
+        <span>Name:</span>
+        <span class="dsf" id="ds_name"></span>
+      </div>
+      <div class="player">
+        <span>Player:</span>
+        <span class="dsf" id="ds_player"></span>
+      </div>
+      <div class="campaign">
+        <span>Campaign:</span>
+        <span class="dsf" id="ds_campaign"></span>
+      </div>
+      <div class="level">
+        <span>Level:</span>
+        <span class="dsf" id="ds_level"></span>
+      </div>
+    </div>
+
+    <div class="ability_scores">
+      <h3>Ability Scores</h3>
+      <div class="ability_score_header">
+        <span>Ability</span>
+        <span>Score</span>
+        <span>Mod</span>
+        <span>Mod + 1/2 Level</span>
+      </div>
+      <div class="ability_score strength">
+        <span class="ability_score_name">STR</span>
+        <span class="dsf ability_score_score" id="ds_str"></span>
+        <span class="dsf ability_score_modifier" id="ds_str_modifier"></span>
+        <span class="dsf ability_score_modifier_plus_half_level" id="ds_str_modifier_plus_half_level"></span>
+      </div>
+      <div class="ability_score dexterity">
+        <span class="ability_score_name">DEX</span>
+        <span class="dsf ability_score_score" id="ds_dex"></span>
+        <span class="dsf ability_score_modifier" id="ds_dex_modifier"></span>
+        <span class="dsf ability_score_modifier_plus_half_level" id="ds_dex_modifier_plus_half_level"></span>
+      </div>
+    </div>
+    <!-- End HTML Template -->
+  </div> <!-- ds_minimal4e -->
+</body>
+</html>

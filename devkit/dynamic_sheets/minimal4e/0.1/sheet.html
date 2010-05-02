@@ -1,0 +1,47 @@
+<!--
+Normally, your HTML template will be stored at this location in the file structure, and inserted into the layout
+dynamically. For this example, it is in the top-level index.html already.
+-->
+<div class="basic_info">
+  <h3>Basic Info</h3>
+  <div class="name">
+    <span>Name:</span>
+    <span class="dsf" id="ds_name"></span>
+  </div>
+  <div class="player">
+    <span>Player:</span>
+    <span class="dsf" id="ds_player"></span>
+  </div>
+  <div class="campaign">
+    <span>Campaign:</span>
+    <span class="dsf" id="ds_campaign"></span>
+  </div>
+  <div class="level">
+    <span>Level:</span>
+    <span class="dsf" id="ds_level"></span>
+  </div>
+</div>
+
+<div class="ability_scores">
+  <h3>Ability Scores</h3>
+  <div class="ability_score_header">
+    <span>Ability</span>
+    <span>Score</span>
+    <span>Mod</span>
+    <span>Mod + 1/2 Level</span>
+  </div>
+  <div class="ability_score strength">
+    <span class="ability_score_name">STR</span>
+    <span class="dsf ability_score_score" id="ds_str"></span>
+    <span class="dsf ability_score_modifier" id="ds_str_modifier"></span>
+    <span class="dsf ability_score_modifier_plus_half_level" id="ds_str_modifier_plus_half_level"></span>
+  </div>
+  <div class="ability_score dexterity">
+    <span class="ability_score_name">DEX</span>
+    <span class="dsf ability_score_score" id="ds_dex"></span>
+    <span class="dsf ability_score_modifier" id="ds_dex_modifier"></span>
+    <span class="dsf ability_score_modifier_plus_half_level" id="ds_dex_modifier_plus_half_level"></span>
+  </div>
+</div>
+
+<div class="clear"></div>

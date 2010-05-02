@@ -1,0 +1,54 @@
+/****************************
+* This is the CSS for the DST.
+* Any image URLs would be as follows /dynamic_sheets/minimal4e/0.1/images
+*****************************/
+
+
+/****************************
+* Basic Info
+*****************************/
+.ds_minimal4e .level {
+}
+
+/****************************
+* Ability Scores
+*****************************/
+.ds_minimal4e .ability_scores {
+  margin-top: 30px;
+}
+
+.ds_minimal4e .ability_score {
+  clear: left;
+}
+
+.ds_minimal4e .ability_score_header span {
+  display: block;
+  float: left;
+  width: 120px;
+  font-weight: bold;
+}
+
+.ds_minimal4e .ability_score_name {
+  display: block;
+  float: left;
+  width: 120px;
+  font-weight: bold;
+}
+
+.ds_minimal4e .ability_score_score {
+  display: block;
+  float: left;
+  width: 120px;
+}
+
+.ds_minimal4e .ability_score_modifier {
+  display: block;
+  float: left;
+  width: 120px;
+}
+
+.ds_minimal4e .ability_score_modifier_plus_half_level {
+  display: block;
+  float: left;
+  width: 120px;
+}
