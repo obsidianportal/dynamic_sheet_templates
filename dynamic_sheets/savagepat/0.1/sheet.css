@@ -1,0 +1,69 @@
+/****************************
+* This is the CSS for the DST.
+*****************************/
+
+
+/****************************
+* Body Background Image
+*****************************/
+body {
+
+}
+
+/****************************
+* Table elements
+*****************************/
+
+table
+{
+border: 2px solid black;
+border-collapse:collapse;
+width:100%;
+}
+
+td
+{
+border: 1px solid black;
+padding:5px;
+font-family:"Trebuchet MS", Arial, Helvetica, sans-serif;
+font-size:10pt;
+}
+
+th
+{
+border: 1px solid black;
+padding:5px;
+font-family:"Trebuchet MS", Arial, Helvetica, sans-serif;
+font-size:10pt;
+}
+
+
+#stats, #skills, #derived, #basic 
+{
+font-family:"Trebuchet MS", Arial, Helvetica, sans-serif;
+font-size:10pt;
+}
+
+#stats td
+{
+text-align:left;
+vertical-align:top;
+}
+
+#skills td
+{
+text-align:left;
+vertical-align:text-top;
+}
+
+#derived  td
+{
+text-align:left;
+vertical-align:text-top;
+}
+
+#basic  td
+{
+text-align:left;
+vertical-align:text-top;
+}
