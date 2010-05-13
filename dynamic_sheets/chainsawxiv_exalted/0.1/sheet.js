@@ -51,7 +51,7 @@ function pipsConvert(oScope){
 			iValue = padDigits(aSpans[i].innerHTML,2);
 			
 			// Replace the number with the appropriate pips image
-			aSpans[i].innerHTML = '<img src="dynamic_sheets/exalted/0.1/images/pips-' + iValue + '-' + iRange + '.png" class="pips pips' + iRange + '" />';
+			aSpans[i].innerHTML = '<img src="dynamic_sheets/chainsawxiv_exalted/0.1/images/pips-' + iValue + '-' + iRange + '.png" class="pips pips' + iRange + '" />';
 		}
 	}
 	
@@ -67,7 +67,7 @@ function pipsActivate(){
 	if (!bEditMode) return;
 
 	// Gather up all the images within the sheet div
-	var aImages = document.getElementById("ds_exalted").getElementsByTagName("img");
+	var aImages = document.getElementById("ds_chainsawxiv_exalted").getElementsByTagName("img");
 	for (var i = 0; i < aImages.length; i++){
 
 		// If an image has "pips" in its CSS classes, assign the event handler to it
@@ -290,7 +290,7 @@ function areaActivate(){
 	if (!bEditMode) return;
 
 	// Gather up all the spans within the sheet div
-	var aImages = document.getElementById("ds_exalted").getElementsByTagName("span");
+	var aImages = document.getElementById("ds_chainsawxiv_exalted").getElementsByTagName("span");
 	for (var i = 0; i < aImages.length; i++){
 
 		// If an image has "pips" in its CSS classes, assign the event handler to it
