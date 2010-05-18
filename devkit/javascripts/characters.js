@@ -44,6 +44,12 @@
  *    * slug - string - The slug of the current DST.
  *    * isEditable - boolean - True if the DST is in edit mode, false otherwise
  *
+ * <slug>_dataChange(opts) - Called immediately after a field value has been changed. This is
+ *  useful if you want to do auto-calculations or validation. "opts" is a javascript object containing:
+ *    * containerId - string - The HTML id of the container div surrounding the HTML template
+ *    * fieldName - string - The name of the field changed. It will not include the "ds_" prefix.
+ *    * fieldValue - string - The value of the field.
+ *
  * <slug>_dataPreSave(opts) - Called immediately before the data values
  *   are retrieved from the HTML template and sent to the server to save. "opts" is a
  *   javascript object containing:
@@ -109,7 +115,7 @@ if (typeof aisleten.characters == "undefined") {
       );
     },
     
-    bindDynamicAttributes : function() {
+    bindDynamicAttributes : function(containerId, slug) {
       var reservedIds = [];
       $.each(reserved, function(i, val) {
         reservedIds.push("#ds_" + val);
@@ -123,9 +129,13 @@ if (typeof aisleten.characters == "undefined") {
         submit : 'Ok',
         tooltip : jeditableTooltip,
         callback : function(value, settings) {
-          $(this).trigger({
-            type : 'valchange',
-            val : value
+          // Strip off the "ds_"
+          var fieldName = $(this).attr("id").substr(3);
+          
+          me.dstCallback(slug + "_dataChange", {
+            'containerId' : containerId,
+            'fieldName' : fieldName,
+            'fieldValue' : value
           });
         }
       });
@@ -258,7 +268,7 @@ if (typeof aisleten.characters == "undefined") {
           me.loadDynamicSheetValues(divId, dst_slug, isEditable);
 
           // Bind the editing
-          me.bindDynamicAttributes();
+          me.bindDynamicAttributes(divId, dst_slug);
         }
       );
     },
@@ -284,7 +294,7 @@ if (typeof aisleten.characters == "undefined") {
       var isEditable = dynamicSheet.hasClass('editable');
       
       me.loadDynamicSheetValues(containerId, slug, isEditable);
-      me.bindDynamicAttributes();
+      me.bindDynamicAttributes(containerId, slug);
     });
     
     me.bindSaveButton();
