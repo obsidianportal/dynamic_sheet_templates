@@ -18,17 +18,17 @@ var minimal4e_abilities = [
 // You can use the callbacks to receive important events in the character sheet
 function minimal4e_dataPreLoad(options) {
   // Called just before the data is loaded.
-  alert("dataPreLoad");
+  // alert("dataPreLoad");
 }
 
 function minimal4e_dataPostLoad(options) {
   // Called just after the data is loaded.
-  alert("dataPostLoad");
+  // alert("dataPostLoad");
 }
 
 function minimal4e_dataPreSave(options) {
   // Called just before the data is saved to the server.
-  alert("dataPreSave");
+  // alert("dataPreSave");
 }
 
 function minimal4e_recalculateAbilityBonuses() {
