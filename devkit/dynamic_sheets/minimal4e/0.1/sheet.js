@@ -7,52 +7,67 @@
 //
 // The key is to bind to the (fake) "valchange" event on the span that you want to watch. In this example, we bind
 // to the valchange event for the #ds_level element, and recalculate the ability mod + 1/2 level scores.
+  
+  
+// You can define your own variables...just make sure to namespace them!
+var minimal4e_abilities = [
+  "str",
+  "dex"
+];
 
-(function($) {
-  
-  var abilities = [
-    "str",
-    "dex"
-  ];
-  
-  function recalculateAbilityBonuses() {
-    for(var i = 0; i < abilities.length; i++) {
-      var score = $('#ds_' + abilities[i]).html();
-      
-      var mod = abilityMod(score);
-      $('#ds_' + abilities[i] + '_modifier').html(mod);
-      
-      var modPlusHalf = modPlusHalfLevel(mod);
-      $('#ds_' + abilities[i] + '_modifier_plus_half_level').html(modPlusHalf);
-    }
-  }
-  
-  function abilityMod(score) {
-    return Math.floor((parseInt(score) - 10) / 2.0);
-  }
-  
-  function modPlusHalfLevel(mod) {
-    var level = parseInt($('#ds_level').html());
-    return mod + Math.floor(level / 2.0);
-  }
-  
-  function bindAbilEvent(ability) {
-    $('#ds_' + ability).bind('valchange', function(e) {
-      var bonus = abilityMod(e.val);
-      $('#ds_'+ ability + '_modifier').html(bonus);
-      
-      var modPlusHalf = modPlusHalfLevel(bonus);
-      $('#ds_' + ability + '_modifier_plus_half_level').html(modPlusHalf);
-    });
-  }
-  
-  $(document).ready(function() {
-    for(var i = 0; i < abilities.length; i++) {
-      bindAbilEvent(abilities[i]);
-    }
+// You can use the callbacks to receive important events in the character sheet
+function minimal4e_dataPreLoad(options) {
+  // Called just before the data is loaded.
+  alert("dataPreLoad");
+}
+
+function minimal4e_dataPostLoad(options) {
+  // Called just after the data is loaded.
+  alert("dataPostLoad");
+}
+
+function minimal4e_dataPreSave(options) {
+  // Called just before the data is saved to the server.
+  alert("dataPreSave");
+}
+
+function minimal4e_recalculateAbilityBonuses() {
+  for(var i = 0; i < minimal4e_abilities.length; i++) {
+    var score = $('#ds_' + minimal4e_abilities[i]).html();
     
-    $('#ds_level').bind('valchange', function(e) {
-      recalculateAbilityBonuses(e.val);
-    });
+    var mod = minimal4e_abilityMod(score);
+    $('#ds_' + minimal4e_abilities[i] + '_modifier').html(mod);
+    
+    var modPlusHalf = minimal4e_modPlusHalfLevel(mod);
+    $('#ds_' + minimal4e_abilities[i] + '_modifier_plus_half_level').html(modPlusHalf);
+  }
+}
+
+function minimal4e_abilityMod(score) {
+  return Math.floor((parseInt(score) - 10) / 2.0);
+}
+
+function minimal4e_modPlusHalfLevel(mod) {
+  var level = parseInt($('#ds_level').html());
+  return mod + Math.floor(level / 2.0);
+}
+
+function minimal4e_bindAbilEvent(ability) {
+  $('#ds_' + ability).bind('valchange', function(e) {
+    var bonus = minimal4e_abilityMod(e.val);
+    $('#ds_'+ ability + '_modifier').html(bonus);
+    
+    var modPlusHalf = minimal4e_modPlusHalfLevel(bonus);
+    $('#ds_' + ability + '_modifier_plus_half_level').html(modPlusHalf);
   });
-})(jQuery);
+}
+  
+$(document).ready(function() {
+  for(var i = 0; i < minimal4e_abilities.length; i++) {
+    minimal4e_bindAbilEvent(minimal4e_abilities[i]);
+  }
+  
+  $('#ds_level').bind('valchange', function(e) {
+    minimal4e_recalculateAbilityBonuses(e.val);
+  });
+});
