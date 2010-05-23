@@ -56,13 +56,13 @@ function minimal4e_recalculateAllAbilityBonuses() {
 }
 
 function minimal4e_recalculateAbilityBonus(ability) {
-  var score = $('#ds_' + ability).html();
+  var score = jQuery('.dsf_' + ability).html();
   
   var mod = minimal4e_abilityMod(score);
-  $('#ds_' + ability + '_modifier').html(mod);
+  jQuery('.dsf_' + ability + '_modifier').html(mod);
   
   var modPlusHalf = minimal4e_modPlusHalfLevel(mod);
-  $('#ds_' + ability + '_modifier_plus_half_level').html(modPlusHalf);
+  jQuery('.dsf_' + ability + '_modifier_plus_half_level').html(modPlusHalf);
 }
 
 function minimal4e_abilityMod(score) {
@@ -70,6 +70,6 @@ function minimal4e_abilityMod(score) {
 }
 
 function minimal4e_modPlusHalfLevel(mod) {
-  var level = parseInt($('#ds_level').html());
+  var level = parseInt(jQuery('.dsf_level').html());
   return mod + Math.floor(level / 2.0);
 }
