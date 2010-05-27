@@ -52,3 +52,16 @@
   float: left;
   width: 120px;
 }
+
+/****************************
+* Ability Scores
+*****************************/
+
+.ds_minimal4e .trained_skills {
+  margin-top: 30px;
+  clear: both;
+}
+
+.ds_minimal4e .trained_skills ul {
+  list-style-type: none;
+}
