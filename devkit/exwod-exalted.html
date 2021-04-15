@@ -1,0 +1,206 @@
+<!DOCTYPE html
+    PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+
+<head>
+    <title>DST Dev Kit</title>
+    <script type="text/javascript" src="javascripts/jquery-1.3.2.min.js"></script>
+    <script type="text/javascript" src="javascripts/jquery.jeditable-1.7.1.js"></script>
+    <script type="text/javascript" src="javascripts/namespace.js"></script>
+
+    <!-- This is where we do our magic. Take a look to get a better understanding of how to write javascript for your DST. -->
+    <script type="text/javascript" src="http://www.obsidianportal.com/javascripts/characters.js"></script>
+
+    <!-- Load the example data. Modify this file to make sample data for your chosen system. -->
+    <!--<script type="text/javascript" src="example_data.js"></script>-->
+
+    <!-- Load the CSS for the DST, replace with your own! -->
+    <link href="dynamic_sheets/exwod/0.1/exwod-exalted.css" media="screen" rel="stylesheet" type="text/css" />
+
+    <!-- Load the JS for the DST, replace with your own! -->
+    <script type="text/javascript" src="dynamic_sheets/exwod/0.1/exwod-exalted.js"></script>
+
+</head>
+
+<body>
+    <p>
+        Below is an example dynamic character sheet. Try clicking on the values in order to edit them. This is how users
+        will interact with a dynamic sheet.
+    </p>
+    <p>
+        If you want to make your own, make sure to <a
+            href="http://help.obsidianportal.com/faqs/advanced/creating-a-dynamic-character-sheet-template-dst">read the
+            tutorial</a> first. Then, just start editing the HTML in this file. Edit the sample data
+        in <em>example_data.js</em> in order to create data that works with your chosen game system.
+    </p>
+
+    <div class="dynamic_sheet_container">
+
+        <!-- Every dynamic sheet will be surrounded by a div that has the class of "ds_slug". In this example, the slug for my DST is 'minimal4e' -->
+        <div id="dynamic_sheet_999" class="dynamic_sheet exwod editable">
+            <!-- This is inserted automatically. Ignore it... -->
+            <span style="display:none;" class="dst_slug">exwod</span>
+            <!-- 
+      Below is your HTML template.
+      Copy ONLY this section into the HTML Template textarea on Obsidian Portal. Do not copy any of the
+      surrounding HTML!
+      -->
+            <span class="exwod sheet_header">Exalted vs World of Darkness</span>
+            <div class="basic_info">
+                <table class="exwod content-table">
+                    <tr>
+                        <td>
+                            <div class="name">
+                                <span>Name:</span>
+                                <span class="dsf dsf_name"></span>
+                            </div>
+                        </td>
+                        <td>
+                            <div class="nature">
+                                <span>Nature:</span>
+                                <span class="dsf dsf_nature"></span>
+                            </div>
+                        </td>
+                        <td>
+                            <div class="exaltation">
+                                <span>Exaltation:</span>
+                                <span class="dsf dsf_exalttype"></span>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <div class="player">
+                                <span>Player:</span>
+                                <span class="dsf dsf_player"></span>
+                            </div>
+                        </td>
+                        <td>
+                            <div class="demeanor">
+                                <span>Demeanor:</span>
+                                <span class="dsf dsf_demeanor"></span>
+                            </div>
+                        </td>
+                        <td>
+                            <div class="anima">
+                                <span>Anima:</span>
+                                <span class="dsf dsf_anima"></span>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <div class="campaign">
+                                <span>Chronicle:</span>
+                                <span class="dsf dsf_campaign"></span>
+                            </div>
+                        </td>
+                        <td>
+                            <div class="concept">
+                                <span>Concept:</span>
+                                <span class="dsf dsf_concept"></span>
+                            </div>
+                        </td>
+                        <td>
+                            <div class="circle">
+                                <span>Circle:</span>
+                                <span class="dsf dsf_circle"></span>
+                            </div>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+
+            <div class="attributes">
+                <span class="table-3-col-header">Attributes</span>
+                <table class="table-3-col content-table">
+                    <thead>
+                        <tr>
+                            <th>
+                                <span class="table-col-header">Physical</span>
+                            </th>
+                            <th>
+                                <span class="table-col-header">Social</span>
+                            </th>
+                            <th>
+                                <span class="table-col-header">Mental</span>
+                            </th>
+                        </tr>
+                    </thead>
+                    <tr>
+                        <td>
+                            <div class="exwod attributes_physical">
+                                <!-- Placeholder for Physical attributes -->
+                            </div>
+                        </td>
+                        <td>
+                            <div class="exwod attributes_social">
+                                <!-- Placeholder for Social attributes -->
+                            </div>
+                        </td>
+                        <td>
+                            <div class="exwod attributes_mental">
+                                <!-- Placeholder for Mental attributes -->
+                            </div>
+                        </td>
+                    </tr>
+                </table>
+
+            </div>
+            <div class="abilities">
+                <span class="table-3-col-header">Abilities</span>
+                <table class="table-3-col content-table">
+                    <thead>
+                        <tr>
+                            <th>
+                                <span class="table-col-header">Talents</span>
+                            </th>
+                            <th>
+                                <span class="table-col-header">Skills</span>
+                            </th>
+                            <th>
+                                <span class="table-col-header">Knowleges</span>
+                            </th>
+                        </tr>
+                    </thead>
+                    <tr>
+                        <td>
+                            <div class="exwod abilities_talents">
+                                <!-- placeholder for Talents -->
+                            </div>
+                        </td>
+                        <td>
+                            <div class="exwod abilities_skills">
+                                <!-- placeholder for Skills -->
+                            </div>
+                        </td>
+                        <td>
+                            <div class="exwod abilities_knowledges">
+                                <!-- placeholder for Knowledges -->
+                            </div>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+
+            <div class="advantages">
+                Advantages go here
+            </div>
+
+            <!-- End HTML Template - Don't copy anything below here into the template! -->
+        </div>
+        <!-- ds_minimal4e -->
+    </div>
+    <!-- dynamic_sheet_container -->
+    <br /><br />
+
+    <button id="character-save-button">Save</button>
+    <br />
+    <p>
+        Right here is a hidden &lt;div&gt; that holds the data values that will be saved to the server. Click the save
+        button and then examine the DOM (using Firebug) to see what will be sent.
+    </p>
+    <div id="dynamic_sheet_values" style="display:none;"></div>
+</body>
+
+</html>

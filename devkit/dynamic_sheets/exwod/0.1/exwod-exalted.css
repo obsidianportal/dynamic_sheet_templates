@@ -1,0 +1,77 @@
+/*
+.exwod input {
+    min-width: 125px !important;
+    word-wrap: wrap !important;
+    max-height: 20vh !important;
+    padding: 4px !important;
+}*/
+
+.exwod .five_dot_rating{
+    display:inline-flex;
+}
+
+.exwod .ten_dot_rating{
+    display:flex;
+}
+
+.exwod .table-3-col-header{
+    width: 100%;
+    text-align: center;
+}
+
+.exwod .content-table{
+    border:black;
+    border-style: solid;
+    border-width: 2px;
+    width: 100%;
+}
+
+/* Customize the label (the container) */
+.exwod .exwod_dot_container {
+    display: block;
+    position: relative;
+    padding-left: 35px;
+    /*margin-bottom: 12px;*/
+    cursor: pointer;
+    font-size: 22px;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    transition: all .2s;
+}
+
+.exwod .exwod_dotgrouping{
+    width: min-content;
+    display:contents;
+}
+
+/* Hide the default radio button */
+.exwod .hidden_input {
+    display: none;
+}
+  
+.exwod .exwod_dot {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: .9em;
+    height: .9em;
+    background-color: white;
+    border-radius: 50%;
+    vertical-align: middle;
+    border: 1px solid #ddd;
+    -webkit-appearance: none;
+    outline: none;
+    cursor: pointer;
+}
+
+/* On mouse-over, add a grey background color */
+.exwod .exwod_dot_container:hover input ~ .exwod_dot {
+    background-color: #ccc;
+}
+  
+/* When the checkbox is checked, add a black background */
+.exwod .exwod_dot_container input:checked ~ .exwod_dot {
+    background-color:black;
+}
