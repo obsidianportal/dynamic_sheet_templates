@@ -114,7 +114,8 @@ function exwod_createRatingEntryHTML(traitType,ratingNameList,capacity){
     specialtySpan.classList.add('dsf_specialty_'+traitLabel);
 
     var traitDiv = document.createElement('div');
-    traitDiv.className='specialty_' +traitLabel;
+    traitDiv.classList.add('specialty');
+    traitDiv.classList.add('specialty_' +traitLabel);
     traitDiv.setAttribute('cursor','pointer');
     var tSpan = document.createElement('span');
     tSpan.innerText=traitName + ':';

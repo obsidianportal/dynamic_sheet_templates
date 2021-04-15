@@ -1,13 +1,15 @@
-/*
-.exwod input {
-    min-width: 125px !important;
-    word-wrap: wrap !important;
-    max-height: 20vh !important;
-    padding: 4px !important;
+/*.exwod .five_dot_rating{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: flex-start;
 }*/
 
-.exwod .five_dot_rating{
-    display:inline-flex;
+.exwod .five_dot_rating {
+    display: flex;
+    width: -webkit-fill-available;
+    align-items: unset;
+    justify-content: stretch;
 }
 
 .exwod .ten_dot_rating{
@@ -28,12 +30,11 @@
 
 /* Customize the label (the container) */
 .exwod .exwod_dot_container {
-    display: block;
+    display: flex;
     position: relative;
-    padding-left: 35px;
-    /*margin-bottom: 12px;*/
+    padding-left: 20px;
     cursor: pointer;
-    font-size: 22px;
+    font-size: 16px;
     -webkit-user-select: none;
     -moz-user-select: none;
     -ms-user-select: none;
@@ -41,9 +42,24 @@
     transition: all .2s;
 }
 
+/*
 .exwod .exwod_dotgrouping{
-    width: min-content;
-    display:contents;
+    width: -webkit-fill-available;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    align-items: center;
+}*/
+.exwod .exwod_dotgrouping {
+    width: -webkit-fill-available;
+    display: contents;
+    justify-content: flex-end;
+    align-items: self-end;
+}
+
+.exwod .specialty {
+    width: -webkit-fill-available;
+    display: inline;
 }
 
 /* Hide the default radio button */
